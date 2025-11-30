@@ -1,0 +1,16 @@
+-------------------------------------------------------------------------------
+Test set: co.edu.unal.paralela.StudentAnalyticsTest
+-------------------------------------------------------------------------------
+Tests run: 6, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 2.229 sec <<< FAILURE! - in co.edu.unal.paralela.StudentAnalyticsTest
+testMostCommonFirstNameOfInactiveStudentsPerf(co.edu.unal.paralela.StudentAnalyticsTest)  Time elapsed: 0.595 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Expected speedup to be at least 8.0 but was 2.145038167938931
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at co.edu.unal.paralela.StudentAnalyticsTest.testMostCommonFirstNameOfInactiveStudentsPerf(StudentAnalyticsTest.java:118)
+
+testCountNumberOfFailedStudentsOlderThan20Perf(co.edu.unal.paralela.StudentAnalyticsTest)  Time elapsed: 0.483 sec  <<< FAILURE!
+junit.framework.AssertionFailedError: Expected parallel version to run at least 1.2x faster but speedup was 0.5276073619631901
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at co.edu.unal.paralela.StudentAnalyticsTest.testCountNumberOfFailedStudentsOlderThan20Perf(StudentAnalyticsTest.java:160)
+

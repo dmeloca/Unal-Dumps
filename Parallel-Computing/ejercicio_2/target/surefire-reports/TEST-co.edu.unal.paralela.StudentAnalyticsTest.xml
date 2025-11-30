@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="co.edu.unal.paralela.StudentAnalyticsTest" time="2.211" tests="6" errors="0" skipped="0" failures="2">
+  <properties>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="java.vm.version" value="25.0.1"/>
+    <property name="sun.boot.library.path" value="/usr/lib/jvm/java-25-openjdk/lib"/>
+    <property name="maven.multiModuleProjectDirectory" value="/home/ch1p/Documents/Paralela/ejercicio_2"/>
+    <property name="java.vm.vendor" value="Arch Linux"/>
+    <property name="java.vendor.url" value="https://openjdk.org/"/>
+    <property name="guice.disable.misplaced.annotation.check" value="true"/>
+    <property name="path.separator" value=":"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="user.country" value="US"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="stdin.encoding" value="UTF-8"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="user.dir" value="/home/ch1p/Documents/Paralela/ejercicio_2"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="java.runtime.version" value="25.0.1"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.io.tmpdir" value="/tmp"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="os.name" value="Linux"/>
+    <property name="classworlds.conf" value="/usr/share/java/maven/bin/m2.conf"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="/usr/java/packages/lib:/usr/lib64:/lib64:/lib:/usr/lib"/>
+    <property name="maven.conf" value="/usr/share/java/maven/conf"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="java.class.version" value="69.0"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="os.version" value="6.17.8-arch1-1"/>
+    <property name="library.jansi.path" value="/usr/share/java/maven/lib/jansi-native"/>
+    <property name="user.home" value="/home/ch1p"/>
+    <property name="user.timezone" value="America/Bogota"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.specification.version" value="25"/>
+    <property name="user.name" value="ch1p"/>
+    <property name="java.class.path" value="/usr/share/java/maven/boot/plexus-classworlds-2.9.0.jar"/>
+    <property name="java.vm.specification.version" value="25"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher clean compile test"/>
+    <property name="java.home" value="/usr/lib/jvm/java-25-openjdk"/>
+    <property name="user.language" value="en"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="java.version" value="25.0.1"/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Arch Linux"/>
+    <property name="maven.home" value="/usr/share/java/maven"/>
+    <property name="file.separator" value="/"/>
+    <property name="java.version.date" value="2025-10-21"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="sun.cpu.endian" value="little"/>
+  </properties>
+  <testcase name="testAverageAgeOfEnrolledStudents" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.287"/>
+  <testcase name="testAverageAgeOfEnrolledStudentsPerf" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.392"/>
+  <testcase name="testMostCommonFirstNameOfInactiveStudents" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.283"/>
+  <testcase name="testMostCommonFirstNameOfInactiveStudentsPerf" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.595">
+    <failure message="Expected speedup to be at least 8.0 but was 2.145038167938931" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected speedup to be at least 8.0 but was 2.145038167938931
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at co.edu.unal.paralela.StudentAnalyticsTest.testMostCommonFirstNameOfInactiveStudentsPerf(StudentAnalyticsTest.java:118)
+</failure>
+  </testcase>
+  <testcase name="testCountNumberOfFailedStudentsOlderThan20" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.171"/>
+  <testcase name="testCountNumberOfFailedStudentsOlderThan20Perf" classname="co.edu.unal.paralela.StudentAnalyticsTest" time="0.483">
+    <failure message="Expected parallel version to run at least 1.2x faster but speedup was 0.5276073619631901" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: Expected parallel version to run at least 1.2x faster but speedup was 0.5276073619631901
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.assertTrue(Assert.java:20)
+	at co.edu.unal.paralela.StudentAnalyticsTest.testCountNumberOfFailedStudentsOlderThan20Perf(StudentAnalyticsTest.java:160)
+</failure>
+  </testcase>
+</testsuite>
