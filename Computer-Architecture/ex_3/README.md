@@ -1,0 +1,97 @@
+# Exercises
+
+For each exercise draw the stack, write the assembly code and comment the important steps.
+
+## Understanding registers
+
+1. Three parameters via registers
+```c
+int add3(int a, int b, int c) {
+    int s = a + b + c;
+    return s;
+}
+```
+
+2. Mixed operations
+```c
+int mix4(int a, int b, int c, int d) {
+    int x = a + b;
+    int y = c - d;
+    return x * y;
+}
+```
+3. Arithmetic and pointers
+```c
+void prod_div(int a, int b, int *p_prod, int *p_div) {
+    int prod = a * b;
+    int div  = a / b;
+
+    *p_prod = prod;
+    *p_div  = div;
+}
+```
+4. Global reminder of a division
+```c
+int g_resto;
+
+int cociente(int a, int b) {
+    int q = a / b;
+    g_resto = a % b;
+    return q;
+}
+```
+
+3. Function that call other function
+```c
+int f(int x, int y, int z) {
+    return x * y + z;
+}
+
+int caller(int a, int b, int c, int d) {
+    int t = f(a, b, c);
+    return t - d;
+}
+```
+
+4. Local Arrays in stack
+```c
+int sum_local(void) {
+    int a[4];
+    a[0] = 1;
+    a[1] = 2;
+    a[2] = 3;
+    a[3] = 4;
+
+    int s = 0;
+    for (int i = 0; i < 4; i++) {
+        s += a[i];
+    }
+    return s;
+}
+```
+
+
+5. Local Array and parameters
+```c
+int scale_and_sum(int x, int y, int z) {
+    int a[3];
+    a[0] = x * 2;
+    a[1] = y * 3;
+    a[2] = z * 4;
+
+    return a[0] + a[1] + a[2];
+}
+```
+
+6. Functions that return pointers
+```c
+int *choose_ptr(int *a, int *b, int flag) {
+    if (flag) {
+        return a;
+    } else {
+        return b;
+    }
+}
+```
+
+
