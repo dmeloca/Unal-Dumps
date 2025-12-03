@@ -4,8 +4,10 @@ For each exercise draw the stack, write the assembly code and comment the import
 
 ## Conventions
 Fucntion parameters: 
+
     - Linux: `rdi`, `rsi`, `rdx`, `rcx`, `r8`, `r9`
     - Windows: `rcx`, `rdx`, `r8`, `r9`
+
 and in both the result is returned in `rax`
 
 ## Exercises
