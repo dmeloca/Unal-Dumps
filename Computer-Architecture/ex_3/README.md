@@ -2,13 +2,19 @@
 
 For each exercise draw the stack, write the assembly code and comment the important steps.
 
-## Understanding registers
+## Conventions
+Fucntion parameters: 
+    - Linux: `rdi`, `rsi`, `rdx`, `rcx`, `r8`, `r9`
+    - Windows: `rcx`, `rdx`, `r8`, `r9`
+and in both the result is returned in `rax`
+
+## Exercises
+### Understanding registers
 
 1. Three parameters via registers
 ```c
-int add3(int a, int b, int c) {
-    int s = a + b + c;
-    return s;
+int32_t add(int32_t a, int32_t b, int32_t c) {
+    return a + b + c;
 }
 ```
 
@@ -20,6 +26,8 @@ int mix4(int a, int b, int c, int d) {
     return x * y;
 }
 ```
+
+### More complex arithmetic
 3. Arithmetic and pointers
 ```c
 void prod_div(int a, int b, int *p_prod, int *p_div) {
@@ -41,6 +49,7 @@ int cociente(int a, int b) {
 }
 ```
 
+### Call functions
 3. Function that call other function
 ```c
 int f(int x, int y, int z) {
@@ -53,6 +62,7 @@ int caller(int a, int b, int c, int d) {
 }
 ```
 
+### Arrays
 4. Local Arrays in stack
 ```c
 int sum_local(void) {
@@ -82,6 +92,8 @@ int scale_and_sum(int x, int y, int z) {
     return a[0] + a[1] + a[2];
 }
 ```
+
+### Pointers
 
 6. Functions that return pointers
 ```c
