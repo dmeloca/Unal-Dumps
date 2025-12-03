@@ -80,29 +80,7 @@ int sum_local(void) {
 ```
 
 
-5. Local Array and parameters
-```c
-int scale_and_sum(int x, int y, int z) {
-    int a[3];
-    a[0] = x * 2;
-    a[1] = y * 3;
-    a[2] = z * 4;
 
-    return a[0] + a[1] + a[2];
-}
-```
 
-### Pointers
-
-6. Functions that return pointers
-```c
-int *choose_ptr(int *a, int *b, int flag) {
-    if (flag) {
-        return a;
-    } else {
-        return b;
-    }
-}
-```
 
 
