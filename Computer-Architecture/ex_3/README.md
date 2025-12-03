@@ -42,12 +42,9 @@ void prod_div(int a, int b, int *p_prod, int *p_div) {
 ```
 4. Global reminder of a division
 ```c
-int g_resto;
-
-int cociente(int a, int b) {
-    int q = a / b;
-    g_resto = a % b;
-    return q;
+int remainder;
+void division(int32_t *a, int32_t *b){
+	remainder = *a % *b;
 }
 ```
 
