@@ -64,18 +64,12 @@ int caller(int a, int b, int c, int d) {
 ### Arrays
 4. Local Arrays in stack
 ```c
-int sum_local(void) {
-    int a[4];
-    a[0] = 1;
-    a[1] = 2;
-    a[2] = 3;
-    a[3] = 4;
-
-    int s = 0;
-    for (int i = 0; i < 4; i++) {
-        s += a[i];
-    }
-    return s;
+int32_t sum_arr(int32_t *arr){
+	int32_t i, sum;
+	for(i = 0; i<4 ; i++){
+		sum += arr[i];
+	}
+	return sum;
 }
 ```
 
