@@ -1,6 +1,2 @@
 Sardinas-Patterson Theorem Implementation
 =========================================
-
-To - do:
-  - At the moment the algorithm is very complex, so symplifying this is a future task
-  - The algorithm only work with binary alphabets, so implemnt for a more general code is needed

@@ -1,19 +1,18 @@
 def solve_equations(alphabet: set[str], code: set[str], c_prev: set[str]) -> set[str]:
     c_next: set[str] = set()
-    for code_word in code:
-        for symbol in alphabet:
-            if code_word+symbol in c_prev:
-                c_next.add(symbol)
-    for code_word in c_prev:
-        for symbol in alphabet:
-            if code_word+symbol in code:
-                c_next.add(symbol)
+    for x in code:
+        for y in c_prev:
+            if y.startswith(x):
+                c_next.add(y[len(x):])
+            if x.startswith(y):
+                c_next.add(x[len(y):])
+    c_next.discard("")            
     return c_next
 
 
 def main() -> None:
     alphabet: set[str] = {'0', '1'}
-    code: set[str] = {'0', '01', '11'}
+    code: set[str] = {'0', '01', '011'}
     counter: int = 0
     c_i: set[str] = set(code)
 
