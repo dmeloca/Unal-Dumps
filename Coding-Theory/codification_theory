@@ -1,0 +1,45 @@
+Introdution to Codification Theory Course
+=========================================
+
+Ideas para implementar a lo largo del curso de teoría de la codificación
+------------------------------------------------------------------------
+1. Analizador completo de códigos
+    Proyecto - Implementar una herramienta que, dado un código cualquiera:
+        - determine si es prefijo
+        - determine si es unívocamente decodificable (Sardinas–Patterson)
+        - calcule la longitud media
+        - verifique la desigualdad de Kraft
+        - genere un decodificador si es posible
+
+2. Comparación Huffman vs códigos no prefijo
+    Proyecto - Dadas distribuciones de probabilidad reales o simuladas:
+    - construir el código de Huffman.
+    - construir códigos alternativos no prefijo pero UD.
+    - comparar longitud media, complejidad de decodificación y robustez ante errores.
+
+3. Simulador de canal con ruido 
+    Proyecto - simular:
+        - un canal binario con error (BSC)
+        - codificación con distintos códigos
+        - decodificación
+        - tasa de error resultante
+    Bonus - Comparar código prefijo vs no prefijo cuando hay errores.
+
+4. Visualizador de árboles de código
+    Proyecto - Dado un código:
+        - construir su árbol de decodificación
+        - marcar conflictos
+        - detectar prefijos gráficamente
+
+5. Detector automático de ambigüedad
+    Proyecto - Dado un código no prefijo:
+        - encontrar explícitamente dos secuencias distintas que producen el mismo mensaje
+        - no solo decir “no es UD”, sino mostrar la colisión
+
+6. Compresor real 
+    Proyecto - Implementar un compresor sencillo:
+        - leer texto real
+        - estimar probabilidades
+        - generar código (Huffman o similar)
+        - codificar y decodificar
+
