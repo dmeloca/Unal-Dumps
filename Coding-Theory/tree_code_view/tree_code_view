@@ -1,0 +1,9 @@
+Tree Code Generator
+===================
+
+v 0.0.1-beta
+    - Generate the tree from a given alphabet and a given level.
+
+TO-DO
+    - Prune the tree to get the tree code.
+    - Improve the terminology translation.
