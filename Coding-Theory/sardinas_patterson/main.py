@@ -13,7 +13,7 @@ def solve_equations(code: set[str], c_prev: set[str]) -> set[str]:
     c_next.discard("")            
     return c_next
 
-def is_uniquely_decodable(code: set[str]):
+def is_uniquely_decodable(code: set[str]) -> Bool:
     counter: int = 0
 
     current: set[str] = set(code)
