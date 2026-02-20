@@ -1,2 +1,10 @@
 Sardinas-Patterson Theorem Implementation
 =========================================
+v 1.0
+    - Check if a code is uniquely decodable using Sardinas-Patterson theorem.
+    - Print the C_n sets.
+    - Stop when the sets are cyclic.
+
+TO-DO:
+    - Create another way to manage test cases.
+    - Document.
