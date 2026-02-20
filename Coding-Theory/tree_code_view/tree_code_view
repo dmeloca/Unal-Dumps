@@ -7,3 +7,19 @@ v 0.0.1-beta
 TO-DO
     - Prune the tree to get the tree code.
     - Improve the terminology translation.
+    - Generate only the tree code.
+
+CODE:
+    ```python
+    alphabet = {"0", "1"}
+    levels = 3
+
+    current = {""}   # ε
+
+    for _ in range(levels):
+        next_level = set()
+        for prefix in current:
+            for symbol in alphabet:
+                next_level.add(prefix + symbol)
+        current = next_level
+    ```
