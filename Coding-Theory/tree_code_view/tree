@@ -1,0 +1,11 @@
+digraph tree {
+	epsilon [label="ε"]
+	11 [label=11]
+	0 [label=0]
+	10 [label=10]
+	1 [label=1]
+	1 -> 11
+	epsilon -> 1
+	epsilon -> 0
+	1 -> 10
+}
