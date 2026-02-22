@@ -1,29 +1,28 @@
-from graphviz import Digraph
-import sys
+class Tree:
+    def __init__(self, alphabet: set[str], level: int) -> None:
+        self.nodes, self.edges = self._create_tree(alphabet, level)
 
-def create_tree(alphabet: set[str], max_level: int, name: str = "tree") -> None:
-    dot = Digraph(name=name, format="png")
-    dot.node("epsilon", label="ε")
-    current: set[str] = {""}
-    for _ in range(max_level):
-        next_level: set[str] = set()
-        for prefix in current:
-            parent: str = "epsilon" if prefix == "" else prefix
-
-            for symbol in alphabet:
-                child: str = prefix+symbol
-                dot.node(child, label=child)
-                dot.edge(parent, child, label=symbol)
-                next_level.add(child)
-
-        current = next_level
-    
-    dot.render(name, view=True)
+    def _create_tree(self, alphabet: set[str], level: int):
+        nodes: set[str] = {""}
+        current: set[str] = {""}
+        edges: set[frozenset[str]] = set()
+        for _ in range(level):
+            next_level: set[str] = set()
+            for prefix in current:
+                for symbol in alphabet:
+                    node: str = prefix+symbol
+                    next_level.add(node)
+                    nodes.add(node)
+                    edges.add(frozenset({prefix, node}))
+            current = next_level
+        return nodes, edges
 
 def main() -> None:
     alphabet: set[str] = {'0', '1'}
     max_level: int = 3
-    create_tree(alphabet, max_level)
+    tree: Tree = Tree(alphabet, max_level)
+    print(tree.nodes)
+    print(tree.edges)
 
 if __name__ == "__main__":
     main()
