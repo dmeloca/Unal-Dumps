@@ -2,10 +2,7 @@ Tree Code Generator
 ===================
 
 Versions:
-v 0.0.1-beta -> main branch
-    - Generate the tree image from a given alphabet and a given level.
-
-v 0.0.1-alpha -> create-tree-set branch
+v 1.0 at main branch
     - Generate the tree for a given alphabet and a level, as sets.
     - Prune the original tree to get the tree code for a given code.
     - Create the image for the pruned tree.
