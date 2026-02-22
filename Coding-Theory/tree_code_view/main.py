@@ -39,8 +39,10 @@ def graph_tree(nodes: set[str], edges: set[tuple[str, str]], name: str = "tree")
 
     for a, b in edges:
         parent, child = (a,b) if len(a)<=len(b) else (b,a)
-        parent: str = "epsilon" if parent == "" else parent
-        dot.edge(parent, child)
+        if parent == "":
+            dot.edge("epsilon", child, label=child)
+        else:
+            dot.edge(parent, child, label=child[-1])
 
     dot.render(name, view=True)
 
