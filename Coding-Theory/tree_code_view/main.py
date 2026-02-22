@@ -1,4 +1,4 @@
-from graphviz import Digraph
+from graphviz import Graph
 class Tree:
     def __init__(self, alphabet: set[str], level: int) -> None:
         self.nodes, self.edges = self._create_tree(alphabet, level)
@@ -31,7 +31,7 @@ class Tree:
         return nodes, edges
 
 def graph_tree(nodes: set[str], edges: set[tuple[str, str]], name: str = "tree") -> None:
-    dot = Digraph(name=name, format="png")
+    dot = Graph(name=name, format="png")
     for node in nodes:
         label: str = "ε" if node == "" else node
         node_id: str = "epsilon" if node == "" else node
