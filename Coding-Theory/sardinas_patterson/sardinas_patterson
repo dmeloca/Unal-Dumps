@@ -8,3 +8,4 @@ v 1.0
 TO-DO:
     - Create another way to manage test cases.
     - Document.
+    - Is there a way to automatically construct an ambiguous string?
